@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+
+import Login from "./pages/Login";
+
+import GlobalStyles from "./styles/GlobalStyles";
+import { getTokenFromUrl } from "./api/spotify";
 
 function App() {
+  const [token, setToken] = useState("");
+
+  useEffect(() => {
+    const hash = getTokenFromUrl();
+    window.location.hash = "";
+    const tokenUrl = hash.access_token;
+
+    if (tokenUrl) {
+      setToken(tokenUrl);
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Spotify Clone</h1>
+      {token ? "Logado" : <Login />}
+      <GlobalStyles />
+    </>
   );
 }
 
