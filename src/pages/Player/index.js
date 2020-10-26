@@ -1,11 +1,19 @@
 import React from "react";
 
-import { Container, Logo, Button } from "./styles";
+import Sidebar from "../../components/Sidebar";
+import Body from "../../components/Body";
+import Footer from "../../components/Footer";
 
-const Player = () => {
+import { Container, Content } from "./styles";
+
+const Player = ({ spotify }) => {
   return (
     <Container>
-      <h1>Player</h1>
+      <Content>
+        <Sidebar />
+        <Body />
+      </Content>
+      <Footer />
     </Container>
   );
 };
