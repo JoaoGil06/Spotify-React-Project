@@ -12,6 +12,8 @@ import {
   Repeat,
   PlaylistPlay,
   VolumeDown,
+  SongInfo,
+  AlbumLogo,
 } from "./styles";
 
 import { Grid, Slider } from "@material-ui/core";
@@ -20,7 +22,11 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-        <p>Album and song details</p>
+        <AlbumLogo />
+        <SongInfo>
+          <h4>Yeah!</h4>
+          <h4>Usher</h4>
+        </SongInfo>
       </Left>
 
       <Center>
