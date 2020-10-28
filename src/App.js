@@ -35,6 +35,8 @@ function App() {
     }
   }, []);
 
+  console.log("Token", token);
+
   return (
     <>
       {token ? <Player /> : <Login />}
