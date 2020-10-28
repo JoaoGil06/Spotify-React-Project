@@ -1,11 +1,35 @@
 import React from "react";
 
-import { Container } from "./styles";
+import {
+  Container,
+  Left,
+  Center,
+  Right,
+  Play,
+  Next,
+  Previous,
+  Shuffle,
+  Repeat,
+} from "./styles";
 
 const Footer = () => {
   return (
     <Container>
-      <h2>Footer</h2>
+      <Left>
+        <p>Album and song details</p>
+      </Left>
+
+      <Center>
+        <Shuffle />
+        <Previous />
+        <Play fontSize="large" />
+        <Next />
+        <Repeat />
+      </Center>
+
+      <Right>
+        <p>Volume controls</p>
+      </Right>
     </Container>
   );
 };
