@@ -7,7 +7,13 @@ import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
 
 import SidebarOption from "../SidebarOption";
 
+import { useStateValue } from "../../contexts/StateProvider";
+
 const Sidebar = () => {
+  const [{ playlists }, dispatch] = useStateValue();
+
+  console.log(playlists);
+
   return (
     <Container>
       <Logo src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg" />
@@ -19,9 +25,9 @@ const Sidebar = () => {
       <Title>Playlists</Title>
       <hr />
 
-      <SidebarOption title="Hip Hop" />
-      <SidebarOption title="Rock" />
-      <SidebarOption title="RnB" />
+      {playlists?.items?.map((playlist) => (
+        <SidebarOption title={playlist.name} />
+      ))}
     </Container>
   );
 };
