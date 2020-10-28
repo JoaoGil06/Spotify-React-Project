@@ -10,7 +10,11 @@ import {
   Previous,
   Shuffle,
   Repeat,
+  PlaylistPlay,
+  VolumeDown,
 } from "./styles";
+
+import { Grid, Slider } from "@material-ui/core";
 
 const Footer = () => {
   return (
@@ -28,7 +32,19 @@ const Footer = () => {
       </Center>
 
       <Right>
-        <p>Volume controls</p>
+        <Grid container spacing={2}>
+          <Grid item>
+            <PlaylistPlay />
+          </Grid>
+
+          <Grid item>
+            <VolumeDown />
+          </Grid>
+
+          <Grid item xs>
+            <Slider />
+          </Grid>
+        </Grid>
       </Right>
     </Container>
   );

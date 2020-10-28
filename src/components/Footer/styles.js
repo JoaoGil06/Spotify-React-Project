@@ -4,6 +4,8 @@ import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
 import SkipNextIcon from "@material-ui/icons/SkipNext";
 import ShuffleIcon from "@material-ui/icons/Shuffle";
 import RepeatIcon from "@material-ui/icons/Repeat";
+import PlaylistPlayIcon from "@material-ui/icons/PlaylistPlay";
+import VolumeDownIcon from "@material-ui/icons/VolumeDown";
 
 export const Container = styled.div`
   position: fixed;
@@ -34,6 +36,10 @@ export const Center = styled.div`
 
 export const Right = styled.div`
   flex: 0.3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
 `;
 
 export const Play = styled(PlayCircleOutlineIcon)``;
@@ -41,3 +47,5 @@ export const Next = styled(SkipNextIcon)``;
 export const Previous = styled(SkipPreviousIcon)``;
 export const Shuffle = styled(ShuffleIcon)``;
 export const Repeat = styled(RepeatIcon)``;
+export const PlaylistPlay = styled(PlaylistPlayIcon)``;
+export const VolumeDown = styled(VolumeDownIcon)``;
