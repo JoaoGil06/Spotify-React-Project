@@ -14,4 +14,12 @@ export default createGlobalStyle`
     font-family: 'Open Sans', sans-serif;
   }
 
+  input {
+    border: 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
 `;

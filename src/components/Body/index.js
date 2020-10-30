@@ -1,11 +1,12 @@
 import React from "react";
 
 import { Container } from "./styles";
+import Header from "../Header";
 
-const Body = () => {
+const Body = ({ spotify }) => {
   return (
     <Container>
-      <h2>Body</h2>
+      <Header spotify={spotify} />
     </Container>
   );
 };
